@@ -40,3 +40,18 @@ author = "agent"
 [[workflows.workflow.tasks]]
 task = "workflow.run"
 args = "Вправа24"
+
+[[workflows.workflow.tasks]]
+task = "workflow.run"
+args = "Вправа24.1"
+
+[[workflows.workflow]]
+name = "Вправа24.1"
+author = "agent"
+
+[[workflows.workflow.tasks]]
+task = "shell.exec"
+args = "PYTHONPATH=/nix/store/6sgnlndgrd0sqzcg97qzc7chsh76dv9i-python3.11-tkinter-3.11.8/lib/python3.11/site-packages python exercise24.1.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
