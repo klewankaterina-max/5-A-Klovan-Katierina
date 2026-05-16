@@ -18,19 +18,19 @@ deploymentTarget = "cloudrun"
 expertMode = true
 
 [workflows]
-runButton = "Project"
+runButton = ""
 
 [[workflows.workflow]]
 name = "Вправа24"
 mode = "sequential"
 author = "agent"
 
-[workflows.workflow.metadata]
-outputType = "vnc"
-
 [[workflows.workflow.tasks]]
 task = "shell.exec"
-args = "PYTHONPATH=/nix/store/sva2vy77z6d5sfz6vx7r0ci5qfm5c71n-python3.11-tkinter-3.11.13/lib/python3.11/site-packages:$PYTHONPATH python3 exercise24.py"
+args = "python exercise24.py"
+
+[workflows.workflow.metadata]
+outputType = "vnc"
 
 [[workflows.workflow]]
 name = "Project"
